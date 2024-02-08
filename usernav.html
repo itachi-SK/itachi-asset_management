@@ -1,0 +1,39 @@
+<header>
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <div class="btn three-bars">
+       <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+       <div class="text">
+          It Asset Management
+       </div>
+       <ul>
+          <li><a href="logout.php"><i class='bx bx-log-out' ></i>  Logout</a></li>
+          <li class="active"><a href="userindex.php"><i class='bx bxs-palette'></i>  Dashboard</a></li>
+          <li>
+             <a href="#" class="asset-btn"><i class='bx bxs-coin-stack'></i>  Asset
+             <span class="fas fa-caret-down first"></span>
+             </a>
+             <ul class="asset-show">
+                <li><a href="return_asset.php">Return Asset</a></li>
+             </ul>
+          </li>
+          <li><a href="password.php"><i class='bx bx-fingerprint'></i>  Password</a></li> 
+          <li><a href="#"><i class='bx bxs-message-dots'></i>  Feedback</a></li>
+       </ul>
+    </nav>
+    
+    <script>
+       $('.three-bars').click(function(){
+         $(this).toggleClass("click");
+         $('.sidebar').toggleClass("show");
+       });
+         $('.asset-btn').click(function(){
+           $('nav ul .asset-show').toggleClass("show");
+           $('nav ul .first').toggleClass("rotate");
+         });
+         $('nav ul li').click(function(){
+           $(this).addClass("active").siblings().removeClass("active");
+         });
+    </script>
+  </header>
